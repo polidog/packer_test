@@ -5,3 +5,7 @@ license 'all_rights'
 description 'Installs/Configures php_nginx'
 long_description 'Installs/Configures php_nginx'
 version '0.1.0'
+
+depends 'php'
+depends 'php-fpm'
+depends 'nginx'
