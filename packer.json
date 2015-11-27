@@ -1,0 +1,15 @@
+{
+  "builders":[{
+      "type": "docker",
+      "image": "centos:centos7",
+      "export_path": "docker/centos7_image.tar"
+  }],
+  "provisioners":[
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["berks-cookbooks"],
+      "run_list": ["php_nginx::default"],
+      "prevent_sudo": true
+    }
+  ]
+}
